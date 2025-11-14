@@ -1,0 +1,58 @@
+<odoo>
+    <template id="portfolio_template" name="Portfolio Page">
+        <t t-call="website.layout">
+            <div class="container mt-5 mb-5">
+                <h1 class="text-center mb-4">Zuhaib Hassan Portfolio</h1>
+
+                <h2>Projects</h2>
+                <div class="row">
+                    <t t-foreach="projects" t-as="project">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <t t-if="project.image">
+                                    <img t-att-src="'data:image/png;base64,%s' % project.image" class="card-img-top"/>
+                                </t>
+                                <div class="card-body">
+                                    <h5 class="card-title"><t t-esc="project.name"/></h5>
+                                    <p class="card-text"><t t-esc="project.description"/></p>
+                                    <p>
+                                        <t t-foreach="project.skills_ids" t-as="skill">
+                                            <span class="badge bg-primary me-1"><t t-esc="skill.name"/></span>
+                                        </t>
+                                    </p>
+                                    <t t-if="project.project_link">
+                                        <a t-att-href="project.project_link" target="_blank" class="btn btn-sm btn-success">View Project</a>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+                <h2 class="mt-5">Skills</h2>
+                <p>
+                    <t t-foreach="skills" t-as="skill">
+                        <span class="badge bg-info me-1"><t t-esc="skill.name"/></span>
+                    </t>
+                </p>
+
+                <h2 class="mt-5">Experience</h2>
+                <div class="row">
+                    <t t-foreach="experiences" t-as="exp">
+                        <div class="col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><t t-esc="exp.title"/> - <t t-esc="exp.company"/></h5>
+                                    <p class="card-text">
+                                        <t t-esc="exp.description"/>
+                                    </p>
+                                    <small class="text-muted"><t t-esc="exp.start_date"/> - <t t-esc="exp.end_date"/></small>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

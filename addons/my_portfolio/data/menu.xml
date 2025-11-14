@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="portfolio_menu" model="website.menu">
+            <field name="name">My Portfolio</field>
+            <field name="url">/portfolio</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">80</field>
+        </record>
+    </data>
+</odoo>
