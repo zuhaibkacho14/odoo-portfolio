@@ -2,3 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 my_portfolio.access_portfolio_project,access_portfolio_project,my_portfolio.model_portfolio_project,base.group_user,1,1,1,1
 my_portfolio.access_portfolio_skill,access_portfolio_skill,my_portfolio.model_portfolio_skill,base.group_user,1,1,1,1
 my_portfolio.access_portfolio_experience,access_portfolio_experience,my_portfolio.model_portfolio_experience,base.group_user,1,1,1,1
+
+my_portfolio.access_portfolio_project_public,access_portfolio_project_public,my_portfolio.model_portfolio_project,base.group_public,1,0,0,0
+my_portfolio.access_portfolio_skill_public,access_portfolio_skill_public,my_portfolio.model_portfolio_skill,base.group_public,1,0,0,0
+my_portfolio.access_portfolio_experience_public,access_portfolio_experience_public,my_portfolio.model_portfolio_experience,base.group_public,1,0,0,0
