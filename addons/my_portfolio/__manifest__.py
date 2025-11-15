@@ -10,9 +10,10 @@
     'data': [
         'security/ir.model.access.csv',
         'data/menu.xml',
-        # 'views/portfolio_project_views.xml',
-        # 'views/portfolio_skill_views.xml',
-        # 'views/portfolio_experience_views.xml',
+        'views/portfolio_experience_view.xml',
+        'views/portfolio_project_view.xml',
+        'views/portfolio_skill_view.xml',
+        'views/menu_view.xml',
         'views/portfolio_templates.xml',
     ],
     'installable': True,

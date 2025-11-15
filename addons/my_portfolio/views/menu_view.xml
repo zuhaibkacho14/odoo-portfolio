@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_root"
+                  name="Portfolio"
+                  />
+        <menuitem id="skill_menu"
+                  name="Skills"
+                  parent="menu_root"
+                  action="skill_action"/>
+        <menuitem id="project_menu"
+                  name="Projects"
+                  parent="menu_root"
+                  action="project_action"/>
+        <menuitem id="experience_menu"
+                  name="Experience"
+                  parent="menu_root"
+                  action="experience_action"/>
+    </data>
+</odoo>
