@@ -14,5 +14,6 @@ CMD sh -c "odoo \
     --db_user=$DB_USER \
     --db_password=$DB_PASSWORD \
     --database=$DB_NAME \
+    --init=base \
     --addons-path=/mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons \
     --xmlrpc-port=$PORT"
